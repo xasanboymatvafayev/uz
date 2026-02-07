@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
 from app.models import User
+print(User)
 from app.keyboards.client import client_menu_kb
 from app.services.referral import apply_referral_if_needed
 from app.utils.time import utcnow
