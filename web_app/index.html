@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FIESTA • Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">F</div>
+        <div>
+          <div class="title">FIESTA</div>
+          <div class="sub">Food Delivery</div>
+        </div>
+      </div>
+
+      <div class="searchRow">
+        <input id="searchInput" type="text" placeholder="Поиск..." />
+        <button id="filterBtn" class="iconBtn" title="Фильтры">⚙️</button>
+      </div>
+
+      <div class="chips" id="categoryChips"></div>
+    </header>
+
+    <main id="foodGrid" class="grid"></main>
+
+    <div class="cartFab" id="cartFab">
+      <div class="cartFabInner">
+        <div>
+          <div class="cartTitle">Сават</div>
+          <div class="cartSub" id="cartSub">0 items</div>
+        </div>
+        <div class="cartTotal" id="cartTotal">0</div>
+      </div>
+    </div>
+
+    <div class="modal" id="cartModal">
+      <div class="modalSheet">
+        <div class="modalHeader">
+          <div class="modalTitle">Checkout</div>
+          <button class="iconBtn" id="closeCart">✕</button>
+        </div>
+
+        <div id="cartItems" class="cartItems"></div>
+
+        <div class="row">
+          <div class="label">Промокод</div>
+          <input id="promoInput" placeholder="Например: FIESTA15-XXXXX" />
+          <button id="promoCheckBtn" class="btn ghost">Проверить</button>
+          <div id="promoHint" class="hint"></div>
+        </div>
+
+        <div class="row">
+          <div class="label">Имя</div>
+          <input id="nameInput" />
+        </div>
+
+        <div class="row">
+          <div class="label">Телефон</div>
+          <input id="phoneInput" placeholder="+998 (__) ___-__-__" />
+        </div>
+
+        <div class="row">
+          <div class="label">Комментарий</div>
+          <input id="commentInput" placeholder="Например: домофон, этаж..." />
+        </div>
+
+        <div class="row">
+          <button id="geoBtn" class="btn ghost">📍 Локацияны анықлау</button>
+          <div class="hint" id="geoHint">Локация обязательна</div>
+        </div>
+
+        <div class="checkoutBar">
+          <div class="sum">
+            <div class="sumLabel">Итого</div>
+            <div class="sumVal" id="checkoutTotal">0</div>
+          </div>
+          <button id="checkoutBtn" class="btn primary" disabled>Оформить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="filterModal">
+      <div class="modalSheet">
+        <div class="modalHeader">
+          <div class="modalTitle">Фильтры</div>
+          <button class="iconBtn" id="closeFilter">✕</button>
+        </div>
+
+        <div class="filterList">
+          <button class="btn ghost filter" data-sort="rating_desc">⭐ Рейтинг (desc)</button>
+          <button class="btn ghost filter" data-sort="new_desc">🆕 Новые (desc)</button>
+          <button class="btn ghost filter" data-sort="price_asc">⬇️ Цена (asc)</button>
+          <button class="btn ghost filter" data-sort="price_desc">⬆️ Цена (desc)</button>
+          <button class="btn ghost filter" data-sort="">Сброс</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
