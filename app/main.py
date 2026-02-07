@@ -8,6 +8,7 @@ from redis.asyncio import Redis
 from app.config import settings
 from app.logging_conf import setup_logging
 from app.handlers import build_router
+print(build_router)
 from app.middlewares.db import DbSessionMiddleware
 
 
