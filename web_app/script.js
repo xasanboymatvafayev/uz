@@ -2,7 +2,7 @@ const tg = window.Telegram?.WebApp;
 if (tg) tg.expand();
 
 const API_BASE = (tg?.initDataUnsafe?.start_param && tg.initDataUnsafe.start_param) ? "" : ""; // not used
-const apiBaseUrl = (new URLSearchParams(location.search).get("api")) || "http://localhost:8001";
+const apiBaseUrl = (new URLSearchParams(location.search).get("api")) || "https://uz-production.up.railway.app";
 
 let categories = [];
 let foods = [];
